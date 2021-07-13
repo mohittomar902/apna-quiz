@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
+    "debug": "^2.6.9",
     "express": "^4.17.1"
   },
   "name": "quiz_server",
@@ -11,7 +12,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false && npm install --prefix apna-quiz && npm run build --prefix apna-quiz"
   },
   "author": "mohit singh tomar",
   "license": "ISC"
