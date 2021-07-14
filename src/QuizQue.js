@@ -19,7 +19,7 @@ function QuizQue(props){
   };
   const [questions,setQuestions]=useState(null);
   const getData=()=>{
-    fetch("http://localhost:3000/apnaquiz/"+props.sub)
+    fetch("/apnaquiz/"+props.sub)
       .then((response)=>{
         return response.json();
       })
