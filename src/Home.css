@@ -1,0 +1,25 @@
+.tx{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+.bt1 {
+    font-weight: 100;
+    color: aliceblue;
+    text-shadow:1px 1px 0 rgb(23, 24, 23);
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    outline: none;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgb(64, 64, 235);
+  }
+  .bt1 :hover{
+    background-color: #9f93a0;
+  
+  }
