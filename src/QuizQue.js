@@ -5,6 +5,7 @@ import Skeleton from 'react-loading-skeleton';
 import ReactStoreIndicator from 'react-score-indicator'
 
 
+
 function QuizQue(props){
   const renderTime = ({ remainingTime }) => {
     if(remainingTime===0){
