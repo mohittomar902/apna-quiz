@@ -4,7 +4,11 @@ import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 import ReactStoreIndicator from "react-score-indicator";
 
-function QuizQue(props) {
+const QuizQue = ({ 
+  name, 
+  siteUrl, 
+  sub 
+}) => {
   const renderTime = ({ remainingTime }) => {
     if (remainingTime === 0) {
       nextQue();
@@ -14,13 +18,13 @@ function QuizQue(props) {
   };
   const [questions, setQuestions] = useState(null);
   const getData = () => {
-    fetch("/apnaquiz/" + props.sub)
+    fetch("/apnaquiz/" + sub)
       .then((response) => {
         return response.json();
       })
       .then((myJson) => {
         console.log("json data");
-        console.log(props.sub);
+        console.log(sub);
         setQuestions(myJson);
       });
   };
@@ -77,13 +81,13 @@ function QuizQue(props) {
     } else if (questions.length / 2 < score) {
       return <h1>Well Done</h1>;
     } else {
-      console.log(props.siteUrl);
+      console.log(siteUrl);
       return (
         <div>
           <h3>Lern more And try Again</h3>
-          <a href={props.siteUrl}>
+          <a href={siteUrl}>
             {" "}
-            <button>{props.name}</button>
+            <button>{name}</button>
           </a>
         </div>
       );
@@ -100,7 +104,7 @@ function QuizQue(props) {
       ) : (
         <div>
           <header>
-            <div className="title">{props.name}</div>
+            <div className="title">{name}</div>
 
             <div class="timecircle">
               {" "}
@@ -159,5 +163,5 @@ function QuizQue(props) {
       )}
     </div>
   );
-}
+};
 export default QuizQue;
